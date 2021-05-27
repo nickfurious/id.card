@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
+    background-image: url(/img/card-bg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.container { 
+    position: relative; 
+    width: 350px; 
+    height: 250px; 
+}
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    background: rgba(230, 211, 188, 0.369);
+    box-shadow: 0 8px 32px 0 rgba(49, 116, 101, 0.219);
+    backdrop-filter: blur( 1.0px );
+    -webkit-backdrop-filter: blur( 1.0px );
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1.5em;
+    transition: transform 500ms ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .content::after {
+    transform: scaleX(1);
+}
+
+.profile-pic img{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: 5;
+    border-radius: 16px;
+    background: #8c42beb9;
+    box-shadow: inset 1px 1px 2px #4e2469,
+                inset -1px -1px 2px #cc60ff;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+    transform-origin: left;
+}
+
+.content div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content h2{
+    font-size: 30px;
+    font-family: poppins;
+    color: #8d42be;
+}
+
+.content p{
+    font-size: 20px;
+    font-family: poppins;
+    color: #100f10;
+}
+
+.content #age{
+    color: #5c297e;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    font-size: 12px;
+    font-family: poppins;
+    color: #100f10;
+    width: 33%;
+    height: 33%;
+}
+
+.footer #followers, #likes, #posts{
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
